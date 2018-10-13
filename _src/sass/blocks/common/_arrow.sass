@@ -1,0 +1,12 @@
+.arrow
+  &::before
+    @media(max-width: #{$md}px)
+      display: none !important
+  &_up
+    &::before
+      transform: scale(1, -1) rotate(-90deg)
+      @media(max-width: #{$lg}px)
+        transform: initial
+  &_down
+    &::before
+      transform: rotate(-90deg)

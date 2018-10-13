@@ -1,0 +1,132 @@
+.main
+  padding: 50px 0
+  &__wrap
+    display: flex
+    @media(max-width: #{$md}px)
+      flex-direction: column
+  &__column
+    width: 50%
+    display: flex
+    flex-direction: column
+    @media(max-width: #{$md}px)
+      width: 100%
+  &__row
+    display: flex
+    flex-wrap: wrap
+  &__item
+    position: relative
+    display: flex
+    justify-content: space-between
+    padding: 30px 30px 10px
+    min-height: 240px
+    @media(max-width: #{$sm}px)
+      min-height: 190px
+    &.arrow
+      &::before
+        position: absolute
+        display: block
+        content: ''
+        width: 53px
+        height: 147px
+        right: 0
+        z-index: 1
+        background: url('../img/arrow.png') center no-repeat
+    &_small
+      width: 50%
+      flex-direction: column
+      &:first-child
+        &::before
+          top: 115px
+          right: -28px
+          @media(max-width: #{$lg}px)
+            bottom: -80px
+            top: initial
+            right: 8px
+      &:nth-child(2)
+        &::before
+          bottom: -75px
+          right: 15px
+          @media(max-width: #{$lg}px)
+            bottom: -80px
+            right: 8px
+      @media(max-width: #{$lg}px)
+        width: 100%
+        flex-direction: row
+    &_medium
+      width: 100%
+      &.arrow
+        &::before
+          bottom: -75px
+          right: 15px
+    &_big
+      flex-direction: column
+      padding: 30px 30px 20px
+      height: 100%
+      text-align: center
+      @media(max-width: #{$sm}px)
+        padding: 20px
+      &.arrow
+        &::before
+          top: 110px
+          right: -28px
+    &_yellow
+      background-color: $yellow
+    &_blue
+      background-color: $blue
+    &_green
+      background-color: $green
+  &__title
+    margin-bottom: 13px
+    font: 16px $Bold
+    &_big
+      margin-bottom: 15px
+      font: 30px $ExtraBold
+  &__desc
+    margin-bottom: 15px
+    font: 14px/1.8 $Reg
+    &_bottom
+      margin: auto auto 0
+      color: $grey
+      max-width: 420px
+      @media(max-width: #{$lg}px)
+        font-size: 13px
+    &-wrap
+      &_small
+        @media(max-width: #{$lg}px)
+          width: 60%
+      &_medium
+        width: 60%
+      &_big
+        margin-bottom: 100px
+        @media(max-width: #{$lg}px)
+          margin-bottom: 230px
+        @media(max-width: #{$md}px)
+          margin-bottom: 0
+  &__photo
+    max-width: 100%
+    &_sm
+      max-height: 50px
+      @media(max-width: #{$lg}px)
+        max-height: 100%
+    &-wrap
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      &_small
+        @media(max-width: #{$lg}px)
+          width: 40%
+          justify-content: flex-start
+        @media(max-width: #{$md}px)
+          justify-content: center
+      &_medium
+        max-height: 100%
+        width: 40%
+        justify-content: flex-start
+        @media(max-width: #{$md}px)
+          justify-content: center
+  &__btn
+    margin: -60px auto 0
+    max-width: 140px
+    @media(max-width: #{$md}px)
+      margin-bottom: 15px
